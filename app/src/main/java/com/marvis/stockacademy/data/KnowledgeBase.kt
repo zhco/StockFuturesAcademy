@@ -11,7 +11,7 @@ enum class Category(val label: String) {
     RISK("风险管理"), PSYCHOLOGY("交易心理")
 }
 enum class Level(val label: String) { BEGINNER("初级"), INTERMEDIATE("中级"), ADVANCED("高级") }
-enum class ImageType { NONE, CHART, DIAGRAM, FORMULA }
+enum class ImageType { NONE, CHART, DIAGRAM, FORMULA, CODE }
 
 object KnowledgeBase {
     val allItems: List<KnowledgeItem> = listOf(
@@ -716,7 +716,7 @@ object KnowledgeBase {
             "背景：英国加入欧洲汇率机制(ERM),将英镑与德国马克挂钩(1英镑≈2.95马克,±6%浮动)。但1992年英国经济衰退+高通胀,德国统一后经济过热+高利率→英镑无法维持高汇价。索罗斯的判断：英镑严重高估,英国要么大幅加息(经济崩溃)、要么退出ERM让英镑暴跌。索罗斯操作：借入英镑(通过量子基金杠杆)→换成德国马克→同时做空英镑/买入英镑看跌期权。头寸：做空100亿美元等值英镑(当时最大的单笔交易)。黑周三(9月16日)：英国央行两次加息(10%→12%→15%)徒劳无功→当晚宣布退出ERM→英镑暴跌15%。索罗斯：单笔盈利10亿美元,全年基金收益68%,赚了20亿美元。英国：花了33亿英镑外汇储备护盘(无偿),财政大臣引咎辞职。教训：央行在趋势面前也无力回天。",ImageType.NONE, listOf("索罗斯","英镑","黑周三","外汇"), listOf("strategy_033","macro_003","macro_010")),
         KnowledgeItem("basic_061","次贷危机大空头(2008)",Category.BASIC,Level.BEGINNER,
             "少数人提前看到房地产崩盘并从中获利数十亿。",
-            "背景：2000年代美国房地产泡沫→银行把次贷包装成MBS/CDO卖给全球投资者→评级机构给垃圾债券AAA评级。几个做空者：Michael Burry(对冲基金经理,Scion Capital,最早发现次贷问题,通过CDS(信用违约互换)做空次贷债券→2年等待→2008年盈利1亿美元)。Steve Eisman(FrontPoint→做空次贷银行股票→\"所有的一切都是谎言\")。Greg Lippmann(德意志银行交易员→推动CDS市场→让更多机构做空次贷)。CDS机制：类似保险→定期支付保费(保费低)→次贷违约→一次性获赔巨额。做空过程(最痛苦)：2005年开始做空→2006-2007年次贷问题持续恶化但CDS不涨(市场不反应)→Burry面临客户撤资→2008年爆发→"终于"。关键教训：1.市场可能长时间非理性(比你能扛的时间还长) 2.做空的时机是最难的(你对了但这个对需要很长时间兑现)。",ImageType.NONE, listOf("次贷","CDS","做空","2008"), listOf("basic_031","psych_004","risk_004")),
+            "背景：2000年代美国房地产泡沫→银行把次贷包装成MBS/CDO卖给全球投资者→评级机构给垃圾债券AAA评级。几个做空者：Michael Burry(对冲基金经理,Scion Capital,最早发现次贷问题,通过CDS(信用违约互换)做空次贷债券→2年等待→2008年盈利1亿美元)。Steve Eisman(FrontPoint→做空次贷银行股票→\"所有的一切都是谎言\")。Greg Lippmann(德意志银行交易员→推动CDS市场→让更多机构做空次贷)。CDS机制：类似保险→定期支付保费(保费低)→次贷违约→一次性获赔巨额。做空过程(最痛苦)：2005年开始做空→2006-2007年次贷问题持续恶化但CDS不涨(市场不反应)→Burry面临客户撤资→2008年爆发→\"终于\"。关键教训：1.市场可能长时间非理性(比你能扛的时间还长) 2.做空的时机是最难的(你对了但这个对需要很长时间兑现)。",ImageType.NONE, listOf("次贷","CDS","做空","2008"), listOf("basic_031","psych_004","risk_004")),
         KnowledgeItem("basic_062","游戏驿站逼空大战(2021)",Category.BASIC,Level.BEGINNER,
             "散户团结起来掀翻华尔街——社交媒体时代的交易革命。",
             "背景：GameStop(GME,游戏实体零售店)→被疫情+线上游戏双重打击→股价长期低迷($4-20)。华尔街空头：Melvin Capital等对冲基金极度看空GME,做空比例高达140%(借了>公司总股本的空头股票)。Reddit散户(华尔街赌注WSB)：在r/wallstreetbets发现GME被过度做空→号召散户集体买入→\"逼空\"(short squeeze)。过程：2021年1月中旬GME从$20启动→1月28日冲到$483(盘中)→上涨2400%。Robinhood等券商暂停GME买入(只许卖不允许买)→引发国会听证→Robinhood被骂上全球热搜。结果：部分早进散户赚了数十万美元,高位追入的损失惨重。Melvin Capital等空头亏损超200亿美元(1月单月),后来被迫清盘。启示：1.做空比例过度高→本身就是风险信号(逼空风险) 2.社交媒体改变了信息传播和市场博弈 3.FOMO和贪婪仍是散户最大敌人(很多人在$400+买入后套牢)。",ImageType.NONE, listOf("GME","逼空","散户","做空"), listOf("basic_053","psych_008","psych_004"))
